@@ -14,13 +14,13 @@ jobs:
           distribution: temurin
           java-version: 21
       - run: npm install
-      - run: npm install @capacitor/core @capacitor/cli @capacitor/android
       - run: npm run build
-      - run: npx cap init app300 com.eriomad.app300 --web-dir=dist
+      - run: npx cap init Erio com.eriomad.app300 --web-dir=dist
       - run: npx cap add android
       - run: npx cap sync android
+      - run: mkdir -p ~/.android && cp debug.keystore ~/.android/debug.keystore
       - run: cd android && chmod +x gradlew && ./gradlew assembleDebug
       - uses: actions/upload-artifact@v4
         with:
-          name: app-300-apk
+          name: Erio-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk
