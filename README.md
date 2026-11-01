@@ -1,4 +1,4 @@
-# 300 – 10 mois pour changer (React + Vite)
+# Erio (React + Vite)
 
 ## Lancer / construire
     npm install
@@ -15,7 +15,7 @@ Les prénoms envoyés avec consentement apparaissent dans Netlify > Forms > inst
 
 ## APK (Capacitor)
     npm i @capacitor/core @capacitor/cli @capacitor/android
-    npx cap init app300 com.eriomad.app300 --web-dir=dist
+    npx cap init Erio com.eriomad.app300 --web-dir=dist
     npm run build
     npx cap add android
     npx cap sync
@@ -23,3 +23,8 @@ Les prénoms envoyés avec consentement apparaissent dans Netlify > Forms > inst
 
 ## Données
 Profils, photos de profil et photos d’évolution sont gardés dans le stockage du téléphone (localStorage), jamais envoyés.
+
+## Version 2.0
+Priorités, notifications intelligentes, thèmes, mot de passe, export et sauvegardes.
+Les notifications utilisent @capacitor/local-notifications (déjà dans package.json).
+Widget d'écran d'accueil : pas inclus (nécessite du code Android natif).
